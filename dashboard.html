@@ -542,7 +542,7 @@ document.querySelectorAll('.offcanvas .nav-link').forEach(link => {
 </section>
 
 </main>
-    <style>
+ <style>
   footer a {
     transition: color 0.3s ease, transform 0.3s ease;
   }
@@ -553,13 +553,14 @@ document.querySelectorAll('.offcanvas .nav-link').forEach(link => {
 
   .footer-columns {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* ibaki kama desktop */
     justify-content: space-between;
     gap: 1.5rem;
+    align-items: flex-start;
   }
 
   .footer-column {
-    flex: 1 1 250px;
+    flex: 1 1 0;
     min-width: 0;
   }
 
@@ -614,18 +615,67 @@ document.querySelectorAll('.offcanvas .nav-link').forEach(link => {
     margin-right: 0;
   }
 
+  /* simu na tablet bado ibaki kama desktop, ila ipungue kidogo */
   @media (max-width: 768px) {
     .footer-columns {
-      flex-direction: column;
-      gap: 1.2rem;
+      flex-wrap: nowrap;
+      gap: 1rem;
     }
 
-    .footer-column {
-      width: 100%;
+    .footer-column p,
+    .footer-column li,
+    .footer-column a,
+    .footer-contact-item span {
+      font-size: 0.82rem;
+      line-height: 1.4;
+    }
+
+    .footer-column h5 {
+      font-size: 1rem;
+    }
+
+    .footer-column h6 {
+      font-size: 0.92rem;
+    }
+
+    .footer-social a {
+      font-size: 1.05rem;
+      margin-right: 8px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .footer-columns {
+      flex-wrap: nowrap;
+      gap: 0.8rem;
+    }
+
+    .footer-column p,
+    .footer-column li,
+    .footer-column a,
+    .footer-contact-item span {
+      font-size: 0.75rem;
+      line-height: 1.35;
+    }
+
+    .footer-column h5 {
+      font-size: 0.95rem;
+    }
+
+    .footer-column h6 {
+      font-size: 0.85rem;
+    }
+
+    .footer-social a {
+      font-size: 0.95rem;
+      margin-right: 6px;
+    }
+
+    .footer-contact-item {
+      gap: 6px;
     }
   }
 </style>
-
 <footer class="bg-dark text-light pt-4 pb-3">
   <div class="container">
 
