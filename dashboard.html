@@ -8,6 +8,114 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
      <link href="assets/css/chatAI.css" rel="stylesheet">
     <style>
+  footer a {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  footer a:hover {
+    color: #0d6efd;
+  }
+
+  .footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .footer-column {
+    flex: 1 1 280px;
+    min-width: 0;
+  }
+
+  footer h5, footer h6 {
+    margin-bottom: 1rem;
+  }
+
+  footer ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .footer-contact-item i {
+    flex: 0 0 18px;
+    margin-top: 3px;
+  }
+
+  .footer-contact-item a,
+  .footer-contact-item span {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .social-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 2rem;
+  }
+
+  .social-row a {
+    font-size: 1.5rem;
+  }
+
+  .social-row a:hover {
+    transform: scale(1.2);
+  }
+
+  @media (max-width: 768px) {
+    .footer-columns {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .footer-column {
+      width: 100%;
+      flex: 1 1 100%;
+    }
+
+    footer {
+      padding-top: 2rem !important;
+      padding-bottom: 1.5rem !important;
+    }
+
+    footer h5, footer h6 {
+      margin-bottom: 0.75rem;
+    }
+
+    footer p,
+    footer a,
+    footer li {
+      font-size: 0.95rem;
+    }
+
+    .footer-contact-item {
+      gap: 8px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    footer p,
+    footer a,
+    footer li {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .social-row a {
+      font-size: 1.35rem;
+    }
+  }
+</style>
+    <style>
   .offcanvas .nav-link {
     transition: all 0.3s ease;
   }
@@ -624,24 +732,24 @@ document.querySelectorAll('.offcanvas .nav-link').forEach(link => {
       </div>
 
       <!-- CONTACT INFO -->
-      <div class="footer-column">
+    <div class="footer-column">
   <h6 class="fw-bold mb-3">Contact</h6>
 
-  <div class="mb-2 d-flex align-items-start">
-    <i class="bi bi-geo-alt me-2 text-primary"></i>
+  <div class="footer-contact-item">
+    <i class="bi bi-geo-alt me-1"></i>
     <span>Kisonzo Complex, Iringa, Tanzania</span>
   </div>
 
-  <div class="mb-2 d-flex align-items-start">
-    <i class="bi bi-envelope me-2 text-primary"></i>
-    <a href="mailto:shottofidelis1@email.com" class="text-light text-decoration-none">
+  <div class="footer-contact-item">
+    <i class="bi bi-envelope me-1"></i>
+    <a href="mailto:shottofidelis1@email.com" class="text-decoration-none text-light">
       shottofidelis1@email.com
     </a>
   </div>
 
-  <div class="mb-2 d-flex align-items-start">
-    <i class="bi bi-telephone me-2 text-primary"></i>
-    <a href="tel:+255629628637" class="text-light text-decoration-none">
+  <div class="footer-contact-item">
+    <i class="bi bi-telephone me-1"></i>
+    <a href="tel:+255629628637" class="text-decoration-none text-light">
       +255 629 628 637
     </a>
   </div>
